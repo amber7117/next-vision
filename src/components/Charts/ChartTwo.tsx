@@ -8,8 +8,11 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
+
+
 const options: ApexOptions = {
   colors: ["#3C50E0", "#80CAEE"],
+
   chart: {
     fontFamily: "Satoshi, sans-serif",
     type: "bar",
@@ -60,7 +63,7 @@ const options: ApexOptions = {
     fontSize: "14px",
 
     markers: {
-      radius: 99,
+      customHTML: () => '<div style="border-radius: 50%; width: 10px; height: 10px; background: red;"></div>',
     },
   },
   fill: {
